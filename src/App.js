@@ -14,8 +14,7 @@ import New from './pages/New/New';
 import { productInputs, userInputs } from "./formSource";
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import React from 'react';
-import NewHotel from "./pages/NewHotel/NewHotel";
-import NewRoom from "./pages/NewRoom/NewRoom";
+
 import { hotelColumns, roomColumns, userColumns } from "./datatablesource";
 
 function App() {
@@ -80,24 +79,7 @@ function App() {
                  
                 }
               />
-              <Route
-                path="new"
-                element={
-                  
-                    <NewHotel  />
-                 
-                }
-              />
-            </Route>
-            <Route path="rooms">
-              <Route
-                index
-                element={
-                  
-                    <List columns={roomColumns} />
-                 
-                }
-              />
+              
               <Route
                 path=":productId"
                 element={
@@ -106,14 +88,7 @@ function App() {
                  
                 }
               />
-              <Route
-                path="new"
-                element={
-                  
-                    <NewRoom  />
-                 
-                }
-              />
+              
             </Route>
             <Route exact path="/Details" element={<Details />} />
             <Route exact path="/Profile" element={<Profile />} />
