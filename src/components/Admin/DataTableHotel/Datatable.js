@@ -1,14 +1,34 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import "./datatable.css";
 import { DataGrid } from "@mui/x-data-grid";
 import { hotelColumns, hotelRows } from "../../../datatablesource";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { getHotels } from '../../../utils/api';
 
-const Datatable = (columns) => {
-  console.log(columns, 'ieu di datagtable')
-  const [data, setData] = useState(hotelRows);
+console.log(hotelRows)
+
+const Datatable = () => {
+
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    getHotels().then(data => {
+      console.log("ieu ti api", data)
+      const dataMapping = data.map(item => ({
+        Address: item.address,
+        Distance: item.distance,
+        Price: item.price,
+        city: item.city,
+        id: item._id,
+        name: item.name,
+        status: "",
+        title: item.title,
+        type: item.type,
+      }))
+      setData(dataMapping)
+    })
+  }, []);
+
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
