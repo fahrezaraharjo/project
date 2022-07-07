@@ -24,7 +24,7 @@ function Header() {
       </div>
 
       <div className='header_right'>
-      <Link to="/users/test" style={{ textDecoration: "none" }}>
+      <Link to="/Admin" style={{ textDecoration: "none" }}>
               <div className="viewButton">Become a guest</div>
             </Link>
         <LanguageIcon />

@@ -57,92 +57,54 @@ export const userRows = [
   },
   {
     id: 2,
-    username: "Jamie Lannister",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "2snow@gmail.com",
-    status: "passive",
-    age: 42,
-  },
-  {
-    id: 3,
-    username: "Lannister",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "3snow@gmail.com",
-    status: "pending",
-    age: 45,
-  },
-  {
-    id: 4,
-    username: "Stark",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "4snow@gmail.com",
+    username: "Fahreza",
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
     status: "active",
-    age: 16,
-  },
-  {
-    id: 5,
-    username: "Targaryen",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "5snow@gmail.com",
-    status: "passive",
-    age: 22,
-  },
-  {
-    id: 6,
-    username: "Melisandre",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "6snow@gmail.com",
-    status: "active",
-    age: 15,
-  },
-  {
-    id: 7,
-    username: "Clifford",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "7snow@gmail.com",
-    status: "passive",
-    age: 44,
-  },
-  {
-    id: 8,
-    username: "Frances",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "8snow@gmail.com",
-    status: "active",
-    age: 36,
-  },
-  {
-    id: 9,
-    username: "Roxie",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "snow@gmail.com",
-    status: "pending",
-    age: 65,
-  },
-  {
-    id: 10,
-    username: "Roxie",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "snow@gmail.com",
-    status: "active",
-    age: 65,
-  },
-  {
-    id: 11,
-    username: "eja",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "fahrezaraharjo92@gmail.com",
+    hotels: "Art Deco",
+    age: 35,
+  }, {
+    id: 3,
+    username: "Fahreza",
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
     status: "active",
-    age: 65,
+    email: "fahrezaraharjo92@gmail.com",
+    hotels: "Art Deco",
+    age: 35,
+  }, {
+    id: 4,
+    username: "Fahreza",
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
+    status: "active",
+    email: "fahrezaraharjo92@gmail.com",
+    hotels: "Art Deco",
+    age: 35,
+  }, {
+    id: 5,
+    username: "Fahreza",
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
+    status: "active",
+    email: "fahrezaraharjo92@gmail.com",
+    hotels: "Art Deco",
+    age: 35,
+  }, {
+    id: 6,
+    username: "Fahreza",
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
+    status: "active",
+    email: "fahrezaraharjo92@gmail.com",
+    hotels: "Art Deco",
+    age: 35,
   },
 ];
 
 export const hotelColumns = [
-  { field: "_id", headerName: "ID", width: 250 },
+  { field: "id", headerName: "ID", width: 70 },
   {
     field: "name",
     headerName: "Name",
     width: 150,
+    
   },
   {
     field: "type",
@@ -159,7 +121,96 @@ export const hotelColumns = [
     headerName: "City",
     width: 100,
   },
+  {
+    field: "status",
+    headerName: "Status",
+    width: 160,
+    renderCell: (params) => {
+      return (
+        <div className={`cellWithStatus ${params.row.status}`}>
+          {params.row.status}
+        </div>
+      );
+    },
+  },
 ];
+
+export const hotelRows = [
+  {
+    id: '1',
+    img: "http://localhost:3000/static/media/eja-about.e8bffadc.PNG",
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '2',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '3',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '4',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '5',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '6',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  }, {
+    id: '7',
+    name: 'Swissbell-resort Dago',
+    type: 'resort',
+    Address: 'Dago',
+    Distance: '12km',
+    title: 'Swiss Luxury Hotel & Residence',
+    city: 'Bandung',
+    status: "active",
+    Price: 90000000,
+  },
+  
+];
+
 
 
 export const roomColumns = [

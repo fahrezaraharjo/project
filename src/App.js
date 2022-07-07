@@ -10,8 +10,10 @@ import Details from './pages/Detail/Details';
 import Admin from './pages/Admin/Admin';
 import Single from './pages/Single/Single';
 import List from './pages/List/List';
+import ListHotel from './pages/List hotel/List';
 import New from './pages/New/New';
-import { productInputs, userInputs } from "./formSource";
+import NewHotel from './pages/New hotel/NewHotel';
+import { productInputs, userInputs, hotelInputs } from "./formSource";
 import { BrowserRouter as Router, Routes, Route, BrowserRouter } from "react-router-dom";
 import React from 'react';
 
@@ -53,23 +55,25 @@ function App() {
                  
                 }
               />
-              <Route
+              
+            </Route>
+            <Route path="hotels">
+            <Route
                 path="new"
                 element={
                   
-                    <New inputs={userInputs} title="Add New User" />
+                    <NewHotel inputs={hotelInputs} title="Add New hotel" />
                  
                 }
               />
-            </Route>
-            <Route path="hotels">
               <Route
                 index
                 element={
                   
-                    <List columns={hotelColumns} />
+                    <ListHotel columns={hotelColumns} />
                  
                 }
+                
               />
               <Route
                 path=":productId"

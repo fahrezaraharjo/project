@@ -2,13 +2,13 @@ import React from 'react'
 
 import "./datatable.css";
 import { DataGrid } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../../datatablesource";
+import { hotelColumns, hotelRows } from "../../../datatablesource";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const Datatable = (columns) => {
   console.log(columns, 'ieu di datagtable')
-  const [data, setData] = useState(userRows);
+  const [data, setData] = useState(hotelRows);
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
@@ -45,15 +45,15 @@ const Datatable = (columns) => {
   return (
     <div className="datatable">
       <div className="datatable__Title">
-        Add New User
-        <Link to="/users/new" className="link">
+        Add New hotel
+        <Link to="/Hotels/new" className="link">
           Add New
         </Link>
       </div>
       <DataGrid
         className="datagrid"
         rows={data}
-        columns={userColumns.concat(actionColumn)}
+        columns={hotelColumns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection

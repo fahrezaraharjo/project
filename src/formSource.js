@@ -76,49 +76,49 @@ export const userInputs = [
   ]
     export const hotelInputs = [
       {
-        id: "name",
+        id: "1",
         label: "Name",
         type: "text",
         placeholder: "My Hotel",
       },
       {
-        id: "type",
+        id: "2",
         label: "Type",
         type: "text",
         placeholder: "hotel",
       },
       {
-        id: "city",
+        id: "3",
         label: "City",
         type: "text",
         placeholder: "New York",
       },
       {
-        id: "address",
+        id: "4",
         label: "Address",
         type: "text",
         placeholder: "elton st, 216",
       },
       {
-        id: "distance",
+        id: "5",
         label: "Distance from City Center",
         type: "text",
         placeholder: "500",
       },
       {
-        id: "title",
+        id: "6",
         label: "Title",
         type: "text",
         placeholder: "The best Hotel",
       },
       {
-        id: "desc",
+        id: "7",
         label: "Description",
         type: "text",
         placeholder: "description",
       },
       {
-        id: "cheapestPrice",
+        id: "8",
         label: "Price",
         type: "text",
         placeholder: "100",
